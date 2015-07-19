@@ -305,8 +305,8 @@ pMean &lt;- mean(stepsByDate$stepsTotal, na.rm=TRUE)
 pMedian &lt;- median(stepsByDate$stepsTotal, na.rm=TRUE)
 </code></pre>
 
-<p><em>Mean of the total number of steps taken per day = **9354.2295082</em>**<br/>
-<em>Median of the total number of steps taken per day = **10395</em>**  </p>
+<p><em>Mean of the total number of steps taken per day = 9354.2295082</em><br/>
+<em>Median of the total number of steps taken per day = 10395</em>  </p>
 
 <h2>What is the average daily activity pattern?</h2>
 
@@ -325,7 +325,7 @@ plot(stepsByInterval$interval,stepsByInterval$stepsAvg, type=&quot;l&quot;, main
 maxInterval &lt;- stepsByInterval[stepsByInterval$stepsAvg == max(stepsByInterval$stepsAvg),]$interval
 </code></pre>
 
-<p><em>On average across all the days in the dataset, 5-minute interval number **835</em>* contains the maximum number of steps*</p>
+<p><em>On average across all the days in the dataset, 5-minute interval number 835 contains the maximum number of steps</em></p>
 
 <h2>Imputing missing values</h2>
 
@@ -333,7 +333,7 @@ maxInterval &lt;- stepsByInterval[stepsByInterval$stepsAvg == max(stepsByInterva
 stepsNA &lt;- sum(is.na(activityData$steps))
 </code></pre>
 
-<p><em>The total number of rows where steps field is NA is **2304</em>**</p>
+<p><em>The total number of rows where steps field is NA is 2304</em></p>
 
 <p>We will create a new dataset that is equal to the original dataset but with the missing data filled in.
 We will use the mean for that 5-minute interval.
@@ -366,8 +366,8 @@ filledMean &lt;- mean(stepsByDateFilled$stepsTotal, na.rm=TRUE)
 filledMedian &lt;- median(stepsByDateFilled$stepsTotal, na.rm=TRUE)
 </code></pre>
 
-<p><em>Mean of the total number of steps taken per day in the data set where NA  were replaced with non-NA values  = **1.0766189 &times; 10<sup>4</sup></em>**
-<em>Median of the total number of steps taken per day in the data set where NA  were replaced with non-NA values = **1.0766189 &times; 10<sup>4</sup></em>** </p>
+<p><em>Mean of the total number of steps taken per day in the data set where NA  were replaced with non-NA values  = 1.0766189 &times; 10<sup>4</sup></em>
+<em>Median of the total number of steps taken per day in the data set where NA  were replaced with non-NA values = 1.0766189 &times; 10<sup>4</sup></em> </p>
 
 <p>As we can see, these values are different from the initial data set. 
 Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
