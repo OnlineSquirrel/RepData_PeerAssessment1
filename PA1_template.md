@@ -125,7 +125,7 @@ Time series plot of the 5-minute interval and the average number of steps taken,
 stepsByInterval <- ddply(activityData, .(interval), summarize, stepsAvg=mean(steps, na.rm=TRUE))
 
 ## Plot describing average number of steps (over all dates) for each 5-minute time interval
-plot(stepsByInterval$interval,stepsByInterval$stepsAvg, type="l", main="Avg number of steps taken (averaged across all days) within each 5-minute interval")
+plot(stepsByInterval$interval,stepsByInterval$stepsAvg, type="l", main="Avg number of steps taken in each interval")
 ```
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
@@ -181,7 +181,7 @@ filledMean <- mean(stepsByDateFilled$stepsTotal, na.rm=TRUE)
 filledMedian <- median(stepsByDateFilled$stepsTotal, na.rm=TRUE)
 ```
 
-*Mean of the total number of steps taken per day in the data set where NA  were replaced with non-NA values  = 1.0766189 &times; 10<sup>4</sup>*
+*Mean of the total number of steps taken per day in the data set where NA  were replaced with non-NA values  = 1.0766189 &times; 10<sup>4</sup>*  
 *Median of the total number of steps taken per day in the data set where NA  were replaced with non-NA values = 1.0766189 &times; 10<sup>4</sup>* 
 
 As we can see, these values are different from the initial data set. 
